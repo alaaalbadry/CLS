@@ -5,14 +5,14 @@ public class Rectangle  extends Quad{
 	public Rectangle() {
 		System.out.println("Rectangle created");
 	}
-
+public Rectangle(double x,double y) {
+	this.x=x;
+	this.y=y;
+}
 
 	public double area() {
-		Quad Q=new Quad();
-		Q.getX();
-		Q.getY(); 
-		return x*y;
-		
+		 
+			return  x*y;
 	}
 	
 	public double area(int x) {

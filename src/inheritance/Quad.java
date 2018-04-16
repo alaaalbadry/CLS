@@ -6,11 +6,14 @@ public class Quad extends Shape {
 	public double y;
 	
 	public Quad() {
-		System.out.println("created a quad");
+		System.out.println("quad created");
 	}
-	
-	 
-	
+//	
+//	 public Quad(double x,double y) {
+//		 this.x=x;
+//		 this.y=y;
+//	 }
+//	
 	
 	public double getX() {
 		return x;
