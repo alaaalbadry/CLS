@@ -18,9 +18,9 @@ public class CalculatorGuI {
 
 	private JFrame frmCalculator;
 	private JTextField result;
-	private JTextField fnum;
+	
 
-	double var1;
+	double num1;
 	int op;
 
 	/**
@@ -59,18 +59,20 @@ public class CalculatorGuI {
 		btnNewButton.setFont(new Font("Sitka Text", Font.BOLD, 17));
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				var1=Double.parseDouble(result.getText());
+				num1=Double.parseDouble(result.getText());
 				 result.setText("+");
 				  op=1;
+				  result.setText(" ");
 			}
 		});
 		
 		JButton button = new JButton("-");
 		button.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				var1=Double.parseDouble(result.getText());
+				num1=Double.parseDouble(result.getText());
 				 result.setText("-");
 				  op=2;
+				  result.setText(" ");
 			}
 		});
 		button.setFont(new Font("Stencil", Font.BOLD, 15));
@@ -78,9 +80,10 @@ public class CalculatorGuI {
 		JButton button_1 = new JButton(" *");
 		button_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				var1=Double.parseDouble(result.getText());
+				num1=Double.parseDouble(result.getText());
 				 result.setText("*");
 				  op=3;
+				  result.setText(" ");
 			
 			}
 		});
@@ -90,9 +93,10 @@ public class CalculatorGuI {
 		btnNewButton_1.setFont(new Font("Snap ITC", Font.BOLD, 13));
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				var1=Double.parseDouble(result.getText());
+				num1=Double.parseDouble(result.getText());
 				 result.setText("/");
 				  op=4;
+				  result.setText(" ");
 			}
 		});
 		
@@ -103,7 +107,7 @@ public class CalculatorGuI {
 				CalOperation co=new CalOperation();
 			
 				int x=op;
-				double y=var1;
+				double y=num1;
 				double z=Double.parseDouble(result.getText());
 			
 				
@@ -153,9 +157,9 @@ public class CalculatorGuI {
 		JButton one = new JButton("1");
 		one.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
+		
 			
-			   result.setText("1.0");
-					
+				 result.setText(result.getText()+"1");
 			
 			}
 		});
@@ -163,7 +167,7 @@ public class CalculatorGuI {
 		JButton two = new JButton("2");
 		two.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				 result.setText("2.0");
+				result.setText(result.getText()+"2");
 				
 			}
 		});
@@ -171,56 +175,56 @@ public class CalculatorGuI {
 		JButton three = new JButton("3");
 		three.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				result.setText("3.0");
+				result.setText(result.getText()+"3");
 			}
 		});
 		
 		JButton four = new JButton("4");
 		four.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				result.setText("4.0");
+				result.setText(result.getText()+"4");
 			}
 		});
 		
 		JButton five = new JButton("5");
 		five.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				result.setText("5.0");
+				result.setText(result.getText()+"5");
 			}
 		});
 		
 		JButton sex = new JButton("6");
 		sex.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				result.setText("6.0");
+				result.setText(result.getText()+"6");
 			}
 		});
 		
 		JButton seven = new JButton("7");
 		seven.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				result.setText("7.0");
+				result.setText(result.getText()+"7");
 			}
 		});
 		
 		JButton eight = new JButton("8");
 		eight.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				result.setText("8.0");
+				result.setText(result.getText()+"8");
 			}
 		});
 		
 		JButton nine = new JButton("9");
 		nine.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				result.setText("9.0");
+				result.setText(result.getText()+"9");
 			}
 		});
 		
 		JButton zero = new JButton("0");
 		zero.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				result.setText("0.0");
+				result.setText(result.getText()+"0");
 			}
 		});
 		
@@ -234,8 +238,7 @@ public class CalculatorGuI {
 			}
 		});
 		
-		fnum = new JTextField();
-		fnum.setColumns(10);
+	
 		
 		
 		GroupLayout groupLayout = new GroupLayout(frmCalculator.getContentPane());
@@ -277,7 +280,7 @@ public class CalculatorGuI {
 					.addPreferredGap(ComponentPlacement.UNRELATED)
 					.addGroup(groupLayout.createParallelGroup(Alignment.LEADING, false)
 						
-						.addComponent(fnum, 0, 0, Short.MAX_VALUE))
+						)
 					.addGap(197))
 		);
 		groupLayout.setVerticalGroup(
@@ -320,7 +323,7 @@ public class CalculatorGuI {
 					.addGap(42))
 				.addGroup(groupLayout.createSequentialGroup()
 					.addGap(67)
-					.addComponent(fnum, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+					
 					.addPreferredGap(ComponentPlacement.UNRELATED)
 					
 					.addContainerGap(229, Short.MAX_VALUE))
